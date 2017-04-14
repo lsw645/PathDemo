@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffe8e8e8"
+    tools:context="com.lxw.pathdemo.MainActivity">
+
+    <ImageView
+        android:id="@+id/album_cover"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ff"
+        />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_below="@id/album_cover"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        android:paddingLeft="72dp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:text="荷塘月色"
+                android:textColor="#FFF"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center_vertical"
+                android:text="凤凰传奇"
+                android:textColor="#9cffffff"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+
+    <FrameLayout
+        android:id="@+id/fab_container"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:layout_below="@+id/album_cover"
+        android:layout_marginTop="-30dp"
+        android:elevation="10dp"
+        >
+
+        <LinearLayout
+            android:id="@+id/control_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0"
+                android:scaleY="0"
+                android:src="@drawable/start"
+                />
+
+            <ImageView
+                android:id="@+id/iv_pause_play"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0"
+                android:scaleY="0"
+                android:src="@drawable/start"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/iv_btn_shape"
+            android:scaleType="centerCrop"/>
+    </FrameLayout>
+
+</RelativeLayout>
